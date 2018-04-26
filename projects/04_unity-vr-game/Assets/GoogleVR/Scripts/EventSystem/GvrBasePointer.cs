@@ -157,7 +157,7 @@ public abstract class GvrBasePointer : MonoBehaviour {
   /// Defaults to GvrControllerInput.ClickButtonDown, can be overridden to change the trigger.
   public virtual bool TriggerDown {
     get {
-      bool isTriggerDown = Input.GetMouseButtonDown(0);
+      bool isTriggerDown = Input.GetMouseButtonDown(0) || MagnetSensor.GetMagnetButtonDown();
       return isTriggerDown || GvrControllerInput.ClickButtonDown;
     }
   }
