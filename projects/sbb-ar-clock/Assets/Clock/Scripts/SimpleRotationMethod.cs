@@ -9,9 +9,9 @@ public class SimpleRotationMethod : MonoBehaviour, Clock.RotationMethod
         double hoursSinceMidnight = timeSinceMidnight.TotalHours; // decimal: e.g. 19.290
 
         // Exercise:
-        var rotationSeconds = minutesSinceMidnight % 60;
-        var rotationMinutes = hoursSinceMidnight % 60;
-        var rotationHours = hoursSinceMidnight / 12;
+        var rotationSeconds = 0.0; // value 0.0 - 1.0
+        var rotationMinutes = 0.0; // value 0.0 - 1.0
+        var rotationHours = 0.0; // value 0.0 - 1.0
 
         return new Clock.HandRotation
         {

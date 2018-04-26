@@ -72,6 +72,6 @@ public class GoblinController : MonoBehaviour, InteractionController.Interactabl
 
     public void Attack()
     {
-        gameController.OnDamage(Random.Range(1f, 5f));
+        gameController.AddTime(Random.Range(1f, 5f));
     }
 }
