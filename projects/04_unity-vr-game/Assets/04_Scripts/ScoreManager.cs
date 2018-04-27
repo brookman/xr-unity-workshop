@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour {
-
+public class ScoreManager : MonoBehaviour
+{
     public Image healthBar;
     public Text healthText;
     public Text scoreText;
@@ -22,7 +20,8 @@ public class ScoreManager : MonoBehaviour {
     public EnemySpawner enemySpawner;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         scoreCanvas.SetActive(false);
     }
 
@@ -47,7 +46,7 @@ public class ScoreManager : MonoBehaviour {
 
     public void GameOver()
     {
-        foreach(CactusBehaviour cactus in FindObjectsOfType<CactusBehaviour>())
+        foreach (CactusBehaviour cactus in FindObjectsOfType<CactusBehaviour>())
         {
             cactus.gameObject.GetComponent<Animator>().Play("Idle");
             cactus.gameObject.GetComponent<MoveCactus>().moveSpeed = 0;
@@ -74,10 +73,8 @@ public class ScoreManager : MonoBehaviour {
         healthText.text = string.Format("{0}%", healthPoints);
 
         // check if game over
-        if(healthPoints == 0)
-        {
-            GameOver();
-        }
+        
+        // TODO
     }
 
     public void DecreaseHealthPoints(int damage)

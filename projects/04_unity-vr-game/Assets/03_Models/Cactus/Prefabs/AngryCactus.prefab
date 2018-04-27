@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 4350223865278590}
   - component: {fileID: 95760264696314480}
   - component: {fileID: 114695354200620132}
-  - component: {fileID: 114265503416041246}
   - component: {fileID: 136056661805353448}
   - component: {fileID: 114466008806416604}
   - component: {fileID: 82416558640552084}
@@ -816,6 +815,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -831,6 +831,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -848,6 +849,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -863,6 +865,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -982,19 +985,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114265503416041246
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1463655311407018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049982de27cc3214fa8e78e92cc4460e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114466008806416604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1121,9 +1111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8024d7f63de03244d913baf08e32959e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioJump: {fileID: 8300000, guid: be0feae54026c7844b3be0eb4c486f61, type: 3}
-  audioGetHit: {fileID: 8300000, guid: d04f9a8db77dd60478f47efffb14c10f, type: 3}
-  audioHit: {fileID: 8300000, guid: 0336a903c33512d4a8dd3e8ddc09126f, type: 3}
+  audioJump: {fileID: 0}
+  audioGetHit: {fileID: 0}
+  audioHit: {fileID: 0}
 --- !u!114 &114732219326216236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1261,6 +1251,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1276,6 +1267,7 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

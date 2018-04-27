@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveCactus : MonoBehaviour
 {
@@ -16,16 +14,12 @@ public class MoveCactus : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(playerPosition);
+        // TODO
+    }
 
-        if (!IsNearPlayer())
-        {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-        }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
-        {
-            animator.Play("Attack");
-        }
+    private bool IsReadyToAttack()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName("Walk");
     }
 
     private bool IsNearPlayer()

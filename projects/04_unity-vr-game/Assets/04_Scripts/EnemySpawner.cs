@@ -9,8 +9,6 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 5;
     public float spawnCircleRadius = 10;
 
-    private Coroutine coroutine;
-
     public void ResetGame()
     {
         StopSpawning();
@@ -22,15 +20,12 @@ public class EnemySpawner : MonoBehaviour
 
     public void StartSpawning()
     {
-        coroutine = StartCoroutine(SpawnEnemy());
+       // TODO
     }
 
     public void StopSpawning()
     {
-        if (coroutine != null)
-        {
-            StopCoroutine(coroutine);
-        }
+        // TODO
     }
 
     IEnumerator SpawnEnemy()
@@ -50,7 +45,6 @@ public class EnemySpawner : MonoBehaviour
 
     public void IncreaseDifficulty()
     {
-        //spawnInterval = Mathf.Clamp(spawnInterval - 0.5f, 0.5f, 10);
-        spawnInterval *= 0.9f;
+        // TODO
     }
 }
